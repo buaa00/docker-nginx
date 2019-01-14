@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:80"
+    networks:
+      - testnet
+  
+  webapi1:
+    build: ./webapi
+    networks:
+      - testnet
+  
+  webapi2:
+    build: ./webapi
+    networks:
+      - testnet
+
+  ssiapp:
+    build: ./ssi-app
+    networks:
+      - testnet
+
+networks:
+  testnet:
