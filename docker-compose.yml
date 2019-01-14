@@ -23,5 +23,10 @@ services:
     networks:
       - testnet
 
+  controlapp:
+    build: ./control-app
+    networks:
+      - testnet
+
 networks:
   testnet:
